@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>탭샵바 가맹 안내 · TAP SHOP BAR Franchise</title>
+<meta name="description" content="혼자 여는 와인바, 탭샵바. 손님이 직접 따르고, 고르고, 꺼내 갑니다. 탭샵바 가맹 상담을 신청하고 가맹 안내 브로셔를 받아 보세요.">
+<meta property="og:title" content="탭샵바 가맹 안내 · TAP SHOP BAR">
+<meta property="og:description" content="혼자 여는 와인바. 탭과 앱, 냉장고가 일하는 와인바를 함께 여세요.">
+<meta property="og:image" content="https://franchise.tsb.wine/assets/img/island.jpg">
+<meta property="og:url" content="https://franchise.tsb.wine/">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#000;
+  --ink-2:#0b0b0d;
+  --panel:#121214;
+  --line:rgba(255,255,255,.12);
+  --line-strong:rgba(255,255,255,.24);
+  --blue:#156dff;
+  --blue-soft:#5a97ff;
+  --text:#ecebe8;
+  --muted:#a2a2a8;
+  --muted-2:#6f6f76;
+  --paper:#ffffff;
+  --paper-2:#f4f4f2;
+  --ink-text:#111;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--text);font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;word-break:keep-all}
+img{max-width:100%;display:block}
+a{color:inherit}
+::selection{background:var(--blue);color:#fff}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted-2);font-weight:500;display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--blue)}
+.blue{color:var(--blue-soft)}
+
+/* top bar */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.topbar.solid{background:rgba(0,0,0,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+.topbar .row{display:flex;align-items:center;justify-content:space-between;height:64px}
+.topbar .logo img{height:17px;width:auto}
+.topbar nav{display:flex;align-items:center;gap:28px}
+.topbar nav a{text-decoration:none;font-size:.9rem;color:var(--muted);transition:color .2s}
+.topbar nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:600;border-radius:999px;transition:transform .15s,background .2s,color .2s;cursor:pointer;border:0;font-family:inherit}
+.btn:active{transform:scale(.98)}
+.btn-blue{background:var(--blue);color:#fff;padding:12px 22px;font-size:.92rem}
+.btn-blue:hover{background:#0b5ce0}
+.btn-line{border:1px solid var(--line-strong);color:#fff;padding:12px 22px;font-size:.92rem;background:transparent}
+.btn-line:hover{border-color:#fff}
+.btn-lg{padding:17px 30px;font-size:1rem}
+.topbar .btn-blue{padding:9px 18px;font-size:.85rem}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;padding:140px 0 80px;overflow:hidden}
+.hero-photo{position:absolute;inset:0;background:url(assets/img/tapwall.jpg) center 55%/cover no-repeat;transform:scale(1.04)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.25) 35%,rgba(0,0,0,.88) 78%,#000 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero .kicker{margin-bottom:26px;color:#d7d7da}
+.hero h1{font-size:clamp(2.8rem,8vw,6.6rem);font-weight:800;line-height:1.02;letter-spacing:-.035em;color:#fff;margin-bottom:26px}
+.hero h1 .blue{color:var(--blue)}
+.hero .sub{font-size:clamp(1.05rem,1.8vw,1.32rem);color:#d9d9dc;max-width:40ch;font-weight:400}
+.hero .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:38px}
+.hero .meta{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:16px 56px;margin-top:64px;padding-top:28px;border-top:1px solid var(--line)}
+.hero .meta .k{font-family:'JetBrains Mono',monospace;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted-2);margin-bottom:6px}
+.hero .meta .v{font-size:1.5rem;font-weight:700;color:#fff;letter-spacing:-.01em}
+.hero .meta .v small{font-size:.8rem;font-weight:400;color:var(--muted);margin-left:4px}
+
+/* sections */
+.band{padding:130px 0;border-bottom:1px solid var(--line);position:relative}
+.band.alt{background:var(--ink-2)}
+.band.paper{background:var(--paper);color:var(--ink-text);border-bottom-color:#e6e6e6}
+.band.paper .eyebrow{color:#8a8a90}
+.sec-head{max-width:760px;margin-bottom:64px}
+.sec-head .eyebrow{margin-bottom:24px}
+.sec-head h2{font-size:clamp(2rem,4.6vw,3.4rem);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:#fff}
+.band.paper .sec-head h2{color:#000}
+.sec-head p{margin-top:22px;font-size:clamp(1.02rem,1.5vw,1.18rem);color:var(--muted);max-width:60ch}
+.band.paper .sec-head p{color:#555}
+
+/* concept trio */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tcard{position:relative;border-radius:18px;overflow:hidden;background:var(--panel);border:1px solid var(--line);display:flex;flex-direction:column}
+.tcard .ph{aspect-ratio:4/5;background-size:cover;background-position:center}
+.tcard .tx{padding:26px 24px 30px}
+.tcard .w{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:1.5rem;letter-spacing:.08em;color:#fff}
+.tcard .w b{color:var(--blue)}
+.tcard h3{font-size:1.12rem;font-weight:700;color:#fff;margin:10px 0 8px}
+.tcard p{color:var(--muted);font-size:.96rem}
+
+/* solo operation */
+.solo .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.solo .ph{border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:url(assets/img/screen.jpg) center/cover}
+.solo .cap{font-size:.84rem;color:var(--muted-2);margin-top:12px}
+.three{display:grid;gap:14px}
+.three .it{border:1px solid var(--line);border-radius:14px;padding:22px 22px;background:var(--panel)}
+.three .it .h{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.three .it .n{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--blue-soft)}
+.three .it h3{font-size:1.1rem;font-weight:700;color:#fff}
+.three .it p{color:var(--muted);font-size:.95rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:56px}
+.split .col{border:1px solid var(--line);border-radius:16px;padding:28px 26px}
+.split .col.owner{border-color:rgba(21,109,255,.5);background:linear-gradient(180deg,rgba(21,109,255,.10),transparent)}
+.split .col .t{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);margin-bottom:16px}
+.split .col.owner .t{color:var(--blue-soft)}
+.split ul{list-style:none}
+.split li{padding:12px 0;border-bottom:1px solid var(--line);color:#e2e2e4;font-size:1rem}
+.split li:last-child{border-bottom:0}
+.note{margin-top:22px;font-size:.88rem;color:var(--muted-2)}
+
+/* photoband */
+.photoband{position:relative;height:clamp(360px,56vw,680px);overflow:hidden;border-bottom:1px solid var(--line)}
+.photoband .img{position:absolute;inset:0;background-size:cover;background-position:center}
+.photoband .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 0 34px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent)}
+.photoband .cap .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.photoband .cap .t{font-size:clamp(1.3rem,2.6vw,2.1rem);font-weight:700;color:#fff;letter-spacing:-.02em;max-width:22ch;line-height:1.25}
+.photoband .cap .loc{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#cfcfd3}
+
+/* store model */
+.model .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3}
+.model .st{padding:34px 24px;border-right:1px solid #e3e3e3}
+.model .st:last-child{border-right:0}
+.model .st .v{font-size:clamp(2.2rem,4.6vw,3.4rem);font-weight:800;letter-spacing:-.04em;color:#000;line-height:1}
+.model .st .v span{color:var(--blue)}
+.model .st .l{margin-top:12px;font-weight:600;color:#222}
+.model .st .s{font-size:.88rem;color:#777;margin-top:2px}
+.model .pics{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;margin-top:56px}
+.model .pics .p{border-radius:16px;overflow:hidden;aspect-ratio:3/2;background-size:cover;background-position:center}
+.model .pics figcaption{font-size:.86rem;color:#777;margin-top:10px}
+.model .fine{font-size:.86rem;color:#888;margin-top:30px}
+
+/* proof */
+.proof .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.tl{border-left:1px solid var(--line-strong)}
+.tl .row{position:relative;padding:0 0 26px 28px}
+.tl .row::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px rgba(21,109,255,.18)}
+.tl .when{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--muted);letter-spacing:.04em}
+.tl .what{font-size:1.08rem;color:#fff;font-weight:600;margin-top:2px}
+.made{display:grid;gap:14px}
+.made .it{border:1px solid var(--line);border-radius:14px;padding:24px;background:var(--panel)}
+.made .it h3{font-size:1.1rem;color:#fff;margin-bottom:6px}
+.made .it p{color:var(--muted);font-size:.95rem}
+.keynote{margin-top:14px;border-radius:14px;overflow:hidden;position:relative;aspect-ratio:16/9;background:url(assets/img/keynote.jpg) center 40%/cover}
+.keynote span{position:absolute;left:14px;bottom:12px;font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;background:rgba(0,0,0,.7);padding:6px 10px;border-radius:6px;color:#ddd}
+
+/* education */
+.edu .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.edu .pics{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+.edu .pics .p{border-radius:16px;overflow:hidden;background-size:cover;background-position:center;min-height:360px}
+.edu .badge{display:inline-block;font-size:.8rem;font-weight:700;color:#fff;background:var(--blue);padding:6px 12px;border-radius:999px;margin-bottom:22px}
+.edu h3{font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;letter-spacing:-.03em;color:#000;line-height:1.2;margin-bottom:18px}
+.edu p{color:#444;font-size:1.04rem}
+.edu ul{list-style:none;margin-top:24px;border-top:1px solid #e3e3e3}
+.edu li{padding:14px 0;border-bottom:1px solid #e3e3e3;display:flex;gap:14px;color:#222}
+.edu li::before{content:"✓";color:var(--blue);font-weight:700}
+.support{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:70px}
+.support .it{border:1px solid #e3e3e3;border-radius:14px;padding:22px 20px;background:var(--paper-2)}
+.support .it .n{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--blue)}
+.support .it h4{font-size:1.02rem;margin:10px 0 6px;color:#000}
+.support .it p{font-size:.9rem;color:#555}
+
+/* journey */
+.journey .steps{display:grid;gap:0;border-top:1px solid var(--line)}
+.jrow{display:grid;grid-template-columns:90px 1.1fr 1fr 220px;gap:24px;padding:28px 0;border-bottom:1px solid var(--line);align-items:start}
+.jrow .no{font-family:'JetBrains Mono',monospace;font-size:1.6rem;font-weight:600;color:var(--muted-2)}
+.jrow.key .no{color:var(--blue)}
+.jrow h3{font-size:1.18rem;color:#fff;font-weight:700}
+.jrow .who{font-size:.8rem;color:var(--muted-2);margin-top:4px}
+.jrow p{color:var(--muted);font-size:.96rem}
+.jrow .need .k{font-size:.74rem;font-weight:600;color:var(--blue-soft);margin-bottom:4px}
+.jrow .need .v{font-size:.92rem;color:#d6d6d9}
+.jrow.key{background:linear-gradient(90deg,rgba(21,109,255,.08),transparent 70%)}
+.cost{margin-top:70px;display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.cost h3{font-size:1.6rem;color:#fff;font-weight:800;letter-spacing:-.02em}
+.cost p{color:var(--muted);margin-top:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{border:1px solid var(--line-strong);border-radius:999px;padding:10px 16px;font-size:.92rem;color:#e6e6e8}
+
+/* faq */
+.faq details{border-bottom:1px solid #e3e3e3;padding:22px 0}
+.faq details:first-of-type{border-top:1px solid #e3e3e3}
+.faq summary{list-style:none;cursor:pointer;font-size:1.12rem;font-weight:700;color:#000;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:'JetBrains Mono',monospace;color:var(--blue);font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin-top:12px;color:#555;max-width:70ch}
+
+/* form */
+.apply{background:var(--ink);padding:130px 0}
+.apply .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.apply .left h2{font-size:clamp(2rem,4.2vw,3.2rem);font-weight:800;letter-spacing:-.03em;line-height:1.12;color:#fff;margin:22px 0}
+.apply .left p{color:var(--muted)}
+.dlcard{margin-top:34px;border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;gap:18px;align-items:center;background:var(--panel)}
+.dlcard .ic{width:52px;height:64px;border-radius:6px;background:#fff;color:#000;display:flex;align-items:flex-end;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.62rem;font-weight:600;padding-bottom:8px;flex:none;position:relative}
+.dlcard .ic::before{content:"";position:absolute;top:10px;left:10px;right:10px;height:3px;background:var(--blue);box-shadow:0 8px 0 #ddd,0 16px 0 #ddd}
+.dlcard .t{font-weight:700;color:#fff}
+.dlcard .s{font-size:.86rem;color:var(--muted)}
+.dlcard .lock{font-size:.8rem;color:var(--blue-soft);margin-top:4px}
+.contact{margin-top:34px;display:grid;gap:10px}
+.contact div{display:flex;gap:14px;font-size:.95rem}
+.contact .k{font-family:'JetBrains Mono',monospace;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);width:70px;padding-top:4px}
+.contact a{text-decoration:none;color:#fff}
+
+form.card{background:var(--paper);color:var(--ink-text);border-radius:20px;padding:40px 36px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px 18px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label,.field .lab{font-size:.86rem;font-weight:700;color:#111}
+.field label i,.field .lab i{color:var(--blue);font-style:normal;margin-left:2px}
+.field input[type=text],.field input[type=tel],.field input[type=email],.field select,.field textarea{width:100%;font:inherit;font-size:1rem;color:#111;background:var(--paper-2);border:1px solid #e1e1e1;border-radius:10px;padding:13px 14px;outline:none;transition:border-color .2s,background .2s;-webkit-appearance:none;appearance:none}
+.field select{background-image:linear-gradient(45deg,transparent 50%,#777 50%),linear-gradient(135deg,#777 50%,transparent 50%);background-position:calc(100% - 20px) 55%,calc(100% - 15px) 55%;background-size:5px 5px;background-repeat:no-repeat;padding-right:40px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);background:#fff}
+.field textarea{min-height:110px;resize:vertical}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{position:relative;cursor:pointer;font-weight:500}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts span{display:inline-block;padding:10px 14px;border:1px solid #dcdcdc;border-radius:999px;font-size:.9rem;color:#333;background:#fff;transition:all .15s}
+.opts input:checked+span{background:#000;border-color:#000;color:#fff}
+.opts input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+.consent{grid-column:1/-1;background:var(--paper-2);border-radius:12px;padding:16px 18px;font-size:.84rem;color:#555}
+.consent label{display:flex;gap:10px;align-items:flex-start;font-weight:700;color:#111;font-size:.92rem;margin-top:10px;cursor:pointer}
+.consent input{width:18px;height:18px;margin-top:2px;accent-color:var(--blue)}
+.err{color:#d93025;font-size:.8rem;display:none}
+.field.bad .err{display:block}
+.field.bad input,.field.bad select{border-color:#d93025}
+.submit{grid-column:1/-1;margin-top:8px}
+.submit .btn{width:100%;padding:18px}
+.submit .btn[disabled]{opacity:.6;cursor:wait}
+.formnote{font-size:.8rem;color:#888;margin-top:12px;text-align:center}
+.done{display:none;background:var(--paper);color:#111;border-radius:20px;padding:48px 40px;text-align:left}
+.done.show{display:block}
+.done .ok{width:54px;height:54px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:22px}
+.done h3{font-size:1.8rem;font-weight:800;letter-spacing:-.02em}
+.done p{color:#555;margin-top:10px}
+.done .btn{margin-top:28px}
+.done .next{margin-top:30px;border-top:1px solid #e6e6e6;padding-top:22px;font-size:.92rem;color:#555}
+
+/* footer */
+footer{padding:70px 0 60px;background:#000;border-top:1px solid var(--line)}
+footer .row{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+footer .logo img{height:16px;margin-bottom:18px}
+footer .tag{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.3em;color:var(--muted-2);text-transform:lowercase}
+footer .info{font-size:.84rem;color:var(--muted-2);line-height:1.9}
+footer .legal{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted-2);max-width:90ch}
+
+/* mobile sticky cta */
+.mcta{display:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .topbar nav a:not(.btn){display:none}
+  .hero .meta{grid-template-columns:repeat(2,auto)}
+  .trio{grid-template-columns:1fr}
+  .tcard{flex-direction:row}
+  .tcard .ph{aspect-ratio:auto;width:42%;min-height:220px;flex:none}
+  .solo .grid,.proof .grid,.edu .grid,.apply .grid,.cost{grid-template-columns:1fr;gap:40px}
+  .split{grid-template-columns:1fr}
+  .model .grid{grid-template-columns:repeat(2,1fr)}
+  .model .st:nth-child(2){border-right:0}
+  .model .st:nth-child(-n+2){border-bottom:1px solid #e3e3e3}
+  .model .pics{grid-template-columns:1fr}
+  .support{grid-template-columns:repeat(2,1fr)}
+  .jrow{grid-template-columns:56px 1fr;gap:8px 16px}
+  .jrow .desc,.jrow .need{grid-column:2}
+  .band{padding:96px 0}
+  .apply{padding:96px 0}
+}
+@media (max-width:620px){
+  .wrap{padding:0 20px}
+  .hero{padding:120px 0 60px}
+  .hero .meta .v{font-size:1.25rem}
+  .tcard{flex-direction:column}
+  .tcard .ph{width:100%;aspect-ratio:16/10;min-height:0}
+  .fgrid{grid-template-columns:1fr}
+  form.card{padding:28px 20px}
+  .edu .pics{grid-template-columns:1fr}
+  .edu .pics .p{min-height:240px}
+  .support{grid-template-columns:1fr}
+  .mcta{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;transition:transform .3s}
+  .mcta.hide{transform:translateY(140%)}
+  .mcta .btn{width:100%;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+  footer{padding-bottom:110px}
+}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="topbar" id="top">
+  <div class="wrap row">
+    <a class="logo" href="#top" aria-label="TAP SHOP BAR"><img src="assets/wordmark-white.png" alt="TAP SHOP BAR"></a>
+    <nav>
+      <a href="#concept">콘셉트</a>
+      <a href="#model">매장 모델</a>
+      <a href="#education">교육·지원</a>
+      <a href="#journey">개설 절차</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-blue" href="#apply">상담 신청</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-photo" role="img" aria-label="탭샵바 직영점의 탭 월과 롱테이블"></div>
+  <div class="wrap">
+    <div class="eyebrow kicker">TAP SHOP BAR Franchise 2026</div>
+    <h1>혼자 여는<br>와인바<span class="blue">.</span></h1>
+    <p class="sub">손님이 직접 따르고, 고르고, 꺼내 갑니다.<br>점주는 요리와 추천에 집중합니다.</p>
+    <div class="cta-row">
+      <a class="btn btn-blue btn-lg" href="#apply">가맹 상담 신청</a>
+      <a class="btn btn-line btn-lg" href="#apply">가맹 안내서 받기</a>
+    </div>
+    <div class="meta">
+      <div><div class="k">Since</div><div class="v">2022<small>직영 운영</small></div></div>
+      <div><div class="k">Standard store</div><div class="v">24평<small>24석</small></div></div>
+      <div><div class="k">Wine taps</div><div class="v">4대<small>글라스 16종</small></div></div>
+      <div><div class="k">Bottles</div><div class="v">200종<small>보틀 와인</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- concept -->
+<section class="band" id="concept">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Concept</div>
+      <h2>이름이 곧 매장입니다.</h2>
+      <p>탭샵바는 와인을 마시는 세 가지 방법을 한 매장에 넣었습니다. 한 잔만 마셔도 되고, 한 병을 사 가도 되고, 앉아서 식사를 해도 됩니다.</p>
+    </div>
+    <div class="trio">
+      <article class="tcard rv">
+        <div class="ph" style="background-image:url(assets/img/pour.jpg);background-position:center 60%"></div>
+        <div class="tx"><div class="w"><b>T</b>AP</div><h3>한 잔씩 골라 마시는 탭</h3><p>탭 4대에 글라스 와인 16종. 손님이 앱으로 결제하고 원하는 양만큼 직접 따릅니다.</p></div>
+      </article>
+      <article class="tcard rv">
+        <div class="ph" style="background-image:url(assets/img/shop.jpg)"></div>
+        <div class="tx"><div class="w"><b>S</b>HOP</div><h3>들고 가도 되는 와인 샵</h3><p>보틀 와인 200종. 매장에서 열어도 되고 포장해 가도 됩니다. 앱이 취향에 맞는 병을 추천합니다.</p></div>
+      </article>
+      <article class="tcard rv">
+        <div class="ph" style="background-image:url(assets/img/glasses.jpg)"></div>
+        <div class="tx"><div class="w"><b>B</b>AR</div><h3>가볍게 먹는 바</h3><p>냉장고에서 꺼내 먹는 안주 30종과 주문 요리, 카페 메뉴. 대표 메뉴는 와인에 어울리는 떡볶이입니다.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- solo -->
+<section class="band alt solo">
+  <div class="wrap">
+    <div class="grid">
+      <div class="rv">
+        <div class="sec-head" style="margin-bottom:36px">
+          <div class="eyebrow">Why it works</div>
+          <h2>소믈리에를 고용하지 않아도 운영할 수 있는 이유.</h2>
+          <p>와인바가 어려운 이유는 사람입니다. 추천할 사람, 따를 사람, 계산할 사람이 필요합니다. 탭샵바는 이 일을 탭과 앱, 냉장고로 옮겼습니다.</p>
+        </div>
+        <div class="three">
+          <div class="it"><div class="h"><span class="n">01</span><h3>탭이 따릅니다</h3></div><p>자체 개발한 와인 디스펜서가 정해진 양을 정확히 따르고, 남은 와인을 신선하게 보관합니다.</p></div>
+          <div class="it"><div class="h"><span class="n">02</span><h3>앱이 추천하고 계산합니다</h3></div><p>주문과 결제, 성인 인증, 와인 추천을 앱이 맡습니다. 와인과 음식 재고도 앱에 표시됩니다.</p></div>
+          <div class="it"><div class="h"><span class="n">03</span><h3>손님이 꺼내 갑니다</h3></div><p>보틀과 안주는 냉장고와 진열대에서 손님이 직접 가져갑니다. 서빙 동선이 크게 줄어듭니다.</p></div>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="ph" role="img" aria-label="탭 화면에서 와인 정보를 고르는 손님"></div>
+        <div class="cap">탭 화면이 산지와 품종, 맛, 가격을 보여 줍니다. 손님은 테이스팅이나 한 잔을 골라 직접 따릅니다.</div>
+      </div>
+    </div>
+    <div class="split rv">
+      <div class="col"><div class="t">손님이 직접 하는 일</div><ul><li>앱으로 주문하고 결제하기</li><li>탭에서 글라스 와인 따르기</li><li>냉장고에서 보틀과 안주 꺼내기</li><li>사다리타기, 검색, 추천으로 와인 고르기</li></ul></div>
+      <div class="col owner"><div class="t">점주가 하는 일</div><ul><li>요리 4종 조리와 커피 내리기</li><li>와인 추천과 손님 응대</li><li>진열과 재고 확인</li><li>테이블 정리와 마감</li></ul></div>
+    </div>
+    <p class="note">손님이 몰리는 저녁 시간에는 파트타이머 1명과 함께 운영하는 것을 권장합니다.</p>
+  </div>
+</section>
+
+<section class="photoband">
+  <div class="img" style="background-image:url(assets/img/island.jpg);background-position:center 45%"></div>
+  <div class="cap"><div class="wrap"><div class="t">와인을 커피처럼, 매일 한 잔.</div><div class="loc">wine is second americano</div></div></div>
+</section>
+
+<!-- model -->
+<section class="band paper model" id="model">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Store model</div>
+      <h2>24평에 담은 표준 매장.</h2>
+      <p>입구 왼쪽 벽에 탭과 냉장고, 정면에 카운터와 주방, 오른쪽 벽에 좌석, 가운데에 와인 덱을 놓습니다.</p>
+    </div>
+    <div class="grid rv">
+      <div class="st"><div class="v">24<span>평</span></div><div class="l">전용 약 79㎡</div><div class="s">표준 M 타입</div></div>
+      <div class="st"><div class="v">24<span>석</span></div><div class="l">벤치 16 + 하이테이블 8</div><div class="s">벽면 벤치 배치</div></div>
+      <div class="st"><div class="v">4<span>대</span></div><div class="l">와인 탭</div><div class="s">글라스 와인 16종</div></div>
+      <div class="st"><div class="v">200<span>종</span></div><div class="l">보틀 와인</div><div class="s">보틀 월과 셀러</div></div>
+    </div>
+    <div class="pics rv">
+      <figure><div class="p" style="background-image:url(assets/img/tapwall.jpg)"></div><figcaption>직영점의 탭 월과 롱테이블 홀. 가맹 표준 매장도 같은 방식으로 탭을 벽면에 배치합니다.</figcaption></figure>
+      <figure><div class="p" style="background-image:url(assets/img/roundtap.jpg)"></div><figcaption>탭과 셀프 냉장고, 잔 선반이 한 공간에 놓인 직영점 홀.</figcaption></figure>
+    </div>
+    <p class="fine">사진은 직영점이며, 가맹 표준 매장의 규모와 구성은 점포 형태에 따라 달라집니다. 15평 안팎의 소형과 30평 이상의 대형도 상담할 수 있습니다.</p>
+  </div>
+</section>
+
+<!-- proof -->
+<section class="band proof">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Proven in our own stores</div>
+      <h2>직영점에서 먼저 만들고 고쳤습니다.</h2>
+      <p>탭샵바는 2022년부터 서울 도심에서 직영점을 운영하며 탭 기계와 앱, 운영 방식을 직접 다듬어 왔습니다. 가맹 모델은 그 경험을 작은 매장에 맞게 옮긴 것입니다.</p>
+    </div>
+    <div class="grid">
+      <div class="tl rv">
+        <div class="row"><div class="when">2022.12</div><div class="what">1호점 동대문 두타점 오픈</div></div>
+        <div class="row"><div class="when">2023.06</div><div class="what">청계천 삼일빌딩점 오픈</div></div>
+        <div class="row"><div class="when">2024 – 2025</div><div class="what">상표 등록 (TAP AND SHOP AND BAR, 탭샵바, TSB)</div></div>
+        <div class="row"><div class="when">2026.03</div><div class="what">상암점 오픈</div></div>
+        <div class="row"><div class="when">2026</div><div class="what">마곡점 오픈, 새 브랜드 아이덴티티 적용</div></div>
+        <div class="row"><div class="when">2026.10</div><div class="what">탭샵바 앱 정식 출시</div></div>
+      </div>
+      <div class="made rv">
+        <div class="it"><h3>직접 만든 탭 기계</h3><p>와인 디스펜서를 4세대까지 자체 개발했습니다. 본사가 원격으로 상태를 확인하고 관리합니다.</p></div>
+        <div class="it"><h3>직접 만든 앱과 POS</h3><p>주문, 결제, 재고, 정산이 하나의 시스템으로 연결됩니다. 점주는 따로 장부를 맞출 필요가 없습니다.</p></div>
+        <div class="keynote" role="img" aria-label="TRY EVERYTHING 2026 탭샵바 발표"><span>TRY EVERYTHING 2026 탭샵바 발표</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- education -->
+<section class="band paper edu" id="education">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Education &amp; Support</div>
+      <h2>와인을 몰라도 시작할 수 있습니다.</h2>
+      <p>본사가 가르치고, 매장 밖에서 일어나는 일은 본사가 합니다.</p>
+    </div>
+    <div class="grid">
+      <div class="pics rv">
+        <div class="p" style="background-image:url(assets/img/class.jpg);background-position:30% center"></div>
+        <div class="p" style="background-image:url(assets/img/tasting.jpg);background-position:60% center"></div>
+      </div>
+      <div class="rv">
+        <span class="badge">점주 필수 과정</span>
+        <h3>TSB 소믈리에 자격증 코스</h3>
+        <p>점주가 되려면 반드시 이수해야 하는 본사 교육 과정입니다. 와인을 전혀 모르는 분도 이 과정을 마치고 매장을 엽니다.</p>
+        <ul>
+          <li>계약 후, 오픈 전에 이수합니다</li>
+          <li>기간, 커리큘럼, 비용은 상담 때 안내해 드립니다</li>
+          <li>와인 구성은 본사가 정하고, 매장에서의 추천은 앱이 돕습니다</li>
+        </ul>
+      </div>
+    </div>
+    <div class="support">
+      <div class="it rv"><div class="n">01</div><h4>와인 선정과 공급</h4><p>본사가 와인 구성을 정하고 공급합니다.</p></div>
+      <div class="it rv"><div class="n">02</div><h4>탭과 시스템 관리</h4><p>탭 기계, 앱, POS의 설치와 유지 보수를 맡습니다.</p></div>
+      <div class="it rv"><div class="n">03</div><h4>메뉴와 식자재</h4><p>조리가 간단한 메뉴와 지정 공급처를 연결합니다.</p></div>
+      <div class="it rv"><div class="n">04</div><h4>마케팅</h4><p>브랜드 SNS와 앱 프로모션, 쿠폰을 운영합니다.</p></div>
+      <div class="it rv"><div class="n">05</div><h4>경영 지도</h4><p>매출과 재고 데이터를 함께 보며 운영을 점검합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- journey -->
+<section class="band journey" id="journey">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="eyebrow">Owner journey</div>
+      <h2>상담 신청부터 오픈까지, 8단계.</h2>
+      <p>각 단계에서 무슨 일이 일어나는지, 누가 하는지, 무엇을 준비하면 되는지 정리했습니다. 계약 전까지는 아무것도 확정되지 않습니다.</p>
+    </div>
+    <div class="steps">
+      <div class="jrow key rv"><div class="no">01</div><div><h3>상담 신청</h3><div class="who">예비 점주 → 본사</div></div><div class="desc"><p>이 페이지에서 상담을 신청하면 가맹 안내서를 바로 받아 볼 수 있습니다.</p></div><div class="need"><div class="k">준비할 것</div><div class="v">성함, 연락처, 희망 지역, 투자 가능 금액</div></div></div>
+      <div class="jrow rv"><div class="no">02</div><div><h3>담당자 연락</h3><div class="who">본사 → 예비 점주</div></div><div class="desc"><p>영업일 기준 1~2일 안에 담당자가 연락드리고 상담 일정을 잡습니다.</p></div><div class="need"><div class="k">준비할 것</div><div class="v">궁금한 점. 무엇이든 물어보세요.</div></div></div>
+      <div class="jrow rv"><div class="no">03</div><div><h3>사업 설명</h3><div class="who">본사 ↔ 예비 점주</div></div><div class="desc"><p>정보공개서와 가맹계약서를 드리고 조건과 비용을 설명합니다. 직영점 방문도 가능합니다.</p></div><div class="need"><div class="k">받는 것</div><div class="v">정보공개서, 가맹계약서</div></div></div>
+      <div class="jrow rv"><div class="no">04</div><div><h3>상권과 점포 검토</h3><div class="who">본사 ↔ 예비 점주</div></div><div class="desc"><p>후보 점포를 함께 보고 본사가 상권과 점포에 대한 의견을 드립니다.</p></div><div class="need"><div class="k">준비할 것</div><div class="v">후보 점포 정보 (있다면)</div></div></div>
+      <div class="jrow rv"><div class="no">05</div><div><h3>가맹 계약</h3><div class="who">본사 ↔ 예비 점주</div></div><div class="desc"><p>정보공개서를 받은 날부터 14일이 지난 뒤에 체결합니다. 충분히 검토하실 시간을 드립니다.</p></div><div class="need"><div class="k">준비할 것</div><div class="v">신분증, 계약 서류</div></div></div>
+      <div class="jrow key rv"><div class="no">06</div><div><h3>TSB 소믈리에 자격증 코스</h3><div class="who">점주 필수 · 본사 교육</div></div><div class="desc"><p>와인 기초부터 탭샵바 운영까지, 매장을 열기 전에 반드시 이수하는 본사 교육 과정입니다.</p></div><div class="need"><div class="k">일정</div><div class="v">상담 때 안내</div></div></div>
+      <div class="jrow rv"><div class="no">07</div><div><h3>공사와 개점 준비</h3><div class="who">본사 ↔ 점주</div></div><div class="desc"><p>인테리어 공사와 탭·앱·POS 설치, 매장 운영 교육을 진행합니다.</p></div><div class="need"><div class="k">함께 하는 것</div><div class="v">공사 일정 확인, 오픈 준비</div></div></div>
+      <div class="jrow rv"><div class="no">08</div><div><h3>오픈</h3><div class="who">본사 → 점주</div></div><div class="desc"><p>오픈 홍보와 초기 운영을 본사가 함께 지원합니다.</p></div><div class="need"><div class="k">이후</div><div class="v">경영 지도와 정기 점검</div></div></div>
+    </div>
+    <div class="cost rv">
+      <div><h3>창업에 드는 비용</h3><p>금액은 점포 크기와 상태에 따라 달라지므로, 상담 때 정보공개서와 함께 서면으로 안내해 드립니다.</p></div>
+      <div class="chips"><span>가맹비, 개점 전 교육비</span><span>계약이행보증금</span><span>인테리어, 간판</span><span>주방 설비, 집기</span><span>탭 기계, POS</span><span>초도 와인, 식자재</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- faq -->
+<section class="band paper faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head rv"><div class="eyebrow">FAQ</div><h2>자주 묻는 질문.</h2></div>
+    <div class="rv">
+      <details><summary>와인을 잘 몰라도 되나요?</summary><p>됩니다. 점주는 오픈 전에 TSB 소믈리에 자격증 코스를 이수합니다. 와인 구성은 본사가 정하고, 매장에서의 추천은 앱이 돕습니다.</p></details>
+      <details><summary>정말 혼자 운영할 수 있나요?</summary><p>평소에는 점주 혼자 운영하도록 설계했습니다. 손님이 몰리는 저녁 피크 시간에는 파트타이머 1명을 권장합니다.</p></details>
+      <details><summary>매출은 얼마나 나오나요?</summary><p>상권과 점포 조건, 운영 방식에 따라 다릅니다. 후보 점포가 정해지면 근거 자료와 함께 서면으로 안내해 드립니다.</p></details>
+      <details><summary>창업 비용은 얼마인가요?</summary><p>점포 크기와 상태에 따라 달라집니다. 가맹비, 교육비, 인테리어, 설비, 탭 기계와 POS, 초도 물품 등 항목별 금액을 상담 때 정보공개서와 함께 서면으로 안내해 드립니다.</p></details>
+      <details><summary>점포가 없어도 상담할 수 있나요?</summary><p>네. 희망 지역만 알려 주셔도 됩니다. 후보 점포 검토 단계에서 본사가 상권과 점포에 대한 의견을 드립니다.</p></details>
+      <details><summary>24평보다 작거나 큰 매장도 가능한가요?</summary><p>15평 안팎의 소형과 30평 이상의 대형도 상담할 수 있습니다. 점포 형태에 맞춰 탭과 좌석 구성을 조정합니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- apply -->
+<section class="apply" id="apply">
+  <div class="wrap grid">
+    <div class="left rv">
+      <div class="eyebrow">Apply</div>
+      <h2>상담을 신청하시면 담당자가 연락드립니다.</h2>
+      <p>신청은 상담을 요청하는 것이며, 계약이나 비용이 발생하지 않습니다. 신청 직후 가맹 안내서를 바로 내려받을 수 있습니다.</p>
+      <div class="dlcard">
+        <div class="ic">PDF</div>
+        <div><div class="t">탭샵바 가맹 안내서</div><div class="s">콘셉트 · 매장 모델 · 교육 · 개설 절차 (8쪽)</div><div class="lock" id="dlLock">상담 신청 후 다운로드할 수 있습니다</div></div>
+      </div>
+      <div class="contact">
+        <div><span class="k">Tel</span><a href="tel:023343378">02-334-3378</a></div>
+        <div><span class="k">Email</span><a href="mailto:hello@tsb.wine">hello@tsb.wine</a></div>
+      </div>
+    </div>
+
+    <div class="rv">
+      <form class="card" id="applyForm" novalidate>
+        <div class="fgrid">
+          <div class="field"><label for="f_name">성함<i>*</i></label><input type="text" id="f_name" name="entry.1039986533" autocomplete="name" required><span class="err">성함을 입력해 주세요.</span></div>
+          <div class="field"><label for="f_phone">연락처<i>*</i></label><input type="tel" id="f_phone" name="entry.1248223692" autocomplete="tel" placeholder="010-1234-5678" required><span class="err">휴대폰 번호를 정확히 입력해 주세요.</span></div>
+          <div class="field"><label for="f_email">이메일</label><input type="email" id="f_email" name="entry.1490866427" autocomplete="email"><span class="err">이메일 형식을 확인해 주세요.</span></div>
+          <div class="field"><label for="f_region">희망 지역<i>*</i></label><input type="text" id="f_region" name="entry.1317150728" placeholder="예) 서울 마포구" required><span class="err">희망 지역을 입력해 주세요.</span></div>
+
+          <div class="field full" data-group="entry.2088412779"><span class="lab">점포 보유 여부<i>*</i></span>
+            <div class="opts">
+              <label><input type="radio" name="entry.2088412779" value="점포 있음 (임차 또는 자가)"><span>점포 있음</span></label>
+              <label><input type="radio" name="entry.2088412779" value="알아보는 중"><span>알아보는 중</span></label>
+              <label><input type="radio" name="entry.2088412779" value="아직 없음"><span>아직 없음</span></label>
+            </div><span class="err">하나를 선택해 주세요.</span></div>
+
+          <div class="field"><label for="f_budget">투자 가능 금액 (임차 비용 제외)<i>*</i></label>
+            <select id="f_budget" name="entry.2047920340" required><option value="">선택해 주세요</option><option>1억 원 미만</option><option>1억 ~ 1억 5천만 원</option><option>1억 5천만 ~ 2억 원</option><option>2억 원 이상</option><option>상담 후 결정</option></select><span class="err">선택해 주세요.</span></div>
+          <div class="field"><label for="f_when">희망 오픈 시기<i>*</i></label>
+            <select id="f_when" name="entry.1156233883" required><option value="">선택해 주세요</option><option>3개월 이내</option><option>3 ~ 6개월</option><option>6개월 ~ 1년</option><option>미정</option></select><span class="err">선택해 주세요.</span></div>
+
+          <div class="field"><label for="f_exp">외식·주류 매장 운영 경험<i>*</i></label>
+            <select id="f_exp" name="entry.1148519310" required><option value="">선택해 주세요</option><option>없음 (첫 창업)</option><option>외식업 경험 있음</option><option>주류·바 운영 경험 있음</option><option>현재 매장 운영 중 (업종 전환 고려)</option></select><span class="err">선택해 주세요.</span></div>
+          <div class="field"><label for="f_how">희망 상담 방식<i>*</i></label>
+            <select id="f_how" name="entry.76268188" required><option value="">선택해 주세요</option><option>전화 상담</option><option>본사 방문 상담</option><option>직영점 방문 상담</option><option>화상 상담</option></select><span class="err">선택해 주세요.</span></div>
+
+          <div class="field full"><span class="lab">통화 가능한 시간대</span>
+            <div class="opts">
+              <label><input type="checkbox" name="entry.563152754" value="평일 오전 (10~12시)"><span>평일 오전</span></label>
+              <label><input type="checkbox" name="entry.563152754" value="평일 오후 (13~18시)"><span>평일 오후</span></label>
+              <label><input type="checkbox" name="entry.563152754" value="평일 저녁 (18시 이후)"><span>평일 저녁</span></label>
+              <label><input type="checkbox" name="entry.563152754" value="주말"><span>주말</span></label>
+            </div></div>
+
+          <div class="field full"><label for="f_src">탭샵바를 알게 된 경로</label>
+            <select id="f_src" name="entry.933993339"><option value="">선택해 주세요</option><option>창업 박람회</option><option>직영점 방문</option><option>인스타그램·SNS</option><option>지인 소개</option><option>검색</option></select></div>
+
+          <div class="field full"><label for="f_q">궁금하신 점</label><textarea id="f_q" name="entry.1424172500" placeholder="미리 알려 주시면 상담 때 자세히 안내드립니다."></textarea></div>
+
+          <div class="consent field" data-group="consent">
+            수집 항목: 성함, 연락처, 이메일, 희망 지역 등 입력 정보 · 이용 목적: 가맹 상담 및 안내 · 보유 기간: 상담 종료 후 1년 (요청 시 즉시 파기). 동의를 거부할 수 있으나, 거부 시 상담 신청이 어렵습니다.
+            <label><input type="checkbox" id="f_agree" name="entry.1320831147" value="동의합니다"> 개인정보 수집·이용에 동의합니다 (필수)</label>
+            <span class="err">개인정보 수집·이용에 동의해 주세요.</span>
+          </div>
+
+          <div class="submit"><button class="btn btn-blue" type="submit" id="submitBtn">상담 신청하고 안내서 받기</button><p class="formnote">신청 정보는 가맹 상담 목적으로만 사용됩니다.</p></div>
+        </div>
+      </form>
+
+      <div class="done" id="done" aria-live="polite">
+        <div class="ok">✓</div>
+        <h3>상담 신청이 접수되었습니다.</h3>
+        <p>영업일 기준 1~2일 안에 담당자가 연락드리겠습니다. 기다리시는 동안 가맹 안내서를 먼저 살펴보세요.</p>
+        <a class="btn btn-blue btn-lg" id="dlBtn" href="assets/tsb-franchise-brochure.pdf" download="탭샵바_가맹안내서.pdf">가맹 안내서 다운로드 (PDF)</a>
+        <div class="next">급한 문의는 <a href="tel:023343378"><b>02-334-3378</b></a> 또는 <a href="mailto:hello@tsb.wine"><b>hello@tsb.wine</b></a>으로 연락 주세요.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div><div class="logo"><img src="assets/wordmark-white.png" alt="TAP SHOP BAR"></div><div class="tag">wine is second americano</div></div>
+      <div class="info">주식회사 탭샵바 · 정보공개서 등록번호 20170445<br>가맹 상담 02-334-3378 · hello@tsb.wine<br><a href="https://tsb.wine" style="text-decoration:none">tsb.wine</a></div>
+    </div>
+    <p class="legal">이 페이지의 내용은 가맹 안내를 위한 것이며 특정 매출이나 수익을 보장하지 않습니다. 매출과 수익은 상권, 점포 조건, 운영 방식에 따라 달라집니다. 가맹계약 체결 전 정보공개서와 가맹계약서를 충분히 검토하시고, 필요하면 가맹거래사나 변호사의 자문을 받으시기 바랍니다. 사진은 직영점 및 본사 행사 사진입니다.</p>
+  </div>
+</footer>
+
+<div class="mcta" id="mcta"><a class="btn btn-blue" href="#apply">가맹 상담 신청</a></div>
+
+<script>
+(function(){
+  var FORM_URL='https://docs.google.com/forms/d/e/1FAIpQLSeHZ-J07gaOmZskqaShXkOQvuIpK2CC5SwVPBRSeDq1M8bekA/formResponse';
+  var KEY='tsb_franchise_applied';
+
+  // top bar
+  var bar=document.querySelector('.topbar');
+  var mcta=document.getElementById('mcta');
+  var apply=document.getElementById('apply');
+  function onScroll(){
+    bar.classList.toggle('solid',window.scrollY>40);
+    var r=apply.getBoundingClientRect();
+    mcta.classList.toggle('hide', window.scrollY<300 || (r.top<window.innerHeight && r.bottom>0));
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // reveal
+  var io='IntersectionObserver' in window ? new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'}) : null;
+  document.querySelectorAll('.rv').forEach(function(el){io?io.observe(el):el.classList.add('in')});
+
+  // form
+  var form=document.getElementById('applyForm'), done=document.getElementById('done'), btn=document.getElementById('submitBtn');
+  function showDone(){form.style.display='none';done.classList.add('show');document.getElementById('dlLock').textContent='지금 다운로드할 수 있습니다';}
+  try{ if(localStorage.getItem(KEY)) showDone(); }catch(e){}
+
+  function setBad(el,bad){var f=el.closest('.field'); if(f) f.classList.toggle('bad',bad); return !bad;}
+  function validate(){
+    var ok=true, first=null;
+    function chk(el,cond){ if(!setBad(el,!cond)){ ok=false; first=first||el; } }
+    var name=form.querySelector('#f_name'), phone=form.querySelector('#f_phone'), email=form.querySelector('#f_email'), region=form.querySelector('#f_region');
+    chk(name, name.value.trim().length>0);
+    chk(phone, /^0[0-9\- ]{8,13}$/.test(phone.value.trim()));
+    chk(email, !email.value.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()));
+    chk(region, region.value.trim().length>0);
+    var store=form.querySelector('[data-group="entry.2088412779"]');
+    var storeOk=!!form.querySelector('input[name="entry.2088412779"]:checked'); store.classList.toggle('bad',!storeOk); if(!storeOk){ok=false;first=first||store;}
+    ['#f_budget','#f_when','#f_exp','#f_how'].forEach(function(s){var el=form.querySelector(s); chk(el, !!el.value);});
+    var ag=form.querySelector('#f_agree'); var cg=form.querySelector('[data-group="consent"]'); cg.classList.toggle('bad',!ag.checked); if(!ag.checked){ok=false;first=first||cg;}
+    if(first) first.scrollIntoView({behavior:'smooth',block:'center'});
+    return ok;
+  }
+  form.addEventListener('input',function(e){var f=e.target.closest('.field'); if(f&&f.classList.contains('bad')) f.classList.remove('bad');});
+  form.addEventListener('change',function(e){var f=e.target.closest('.field'); if(f&&f.classList.contains('bad')) f.classList.remove('bad');});
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!validate()) return;
+    btn.disabled=true; btn.textContent='보내는 중…';
+    var fd=new FormData();
+    form.querySelectorAll('input,select,textarea').forEach(function(el){
+      if(!el.name || !el.name.indexOf || el.name.indexOf('entry.')!==0) return;
+      if((el.type==='radio'||el.type==='checkbox') && !el.checked) return;
+      if(!el.value) return;
+      fd.append(el.name, el.value.trim());
+    });
+    fetch(FORM_URL,{method:'POST',mode:'no-cors',body:fd})
+      .then(function(){ try{localStorage.setItem(KEY,'1');}catch(e){} showDone(); done.scrollIntoView({behavior:'smooth',block:'center'}); })
+      .catch(function(){ btn.disabled=false; btn.textContent='상담 신청하고 안내서 받기'; alert('전송에 실패했습니다. 잠시 후 다시 시도하시거나 02-334-3378로 연락 주세요.'); });
+  });
+})();
+</script>
+</body>
+</html>
